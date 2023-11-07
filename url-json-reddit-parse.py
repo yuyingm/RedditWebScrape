@@ -6,6 +6,7 @@ import requests
 # listing = 'top' # controversial, best, hot, new, random, rising, top
 
 
+# The below is creating the four variables above as input.  The four variables above were part of the original script, which is why I'm keeping them there for now.
 subreddit = input(
           "Enter the subreddit that you'd like to scrape (just the name, no slashes, quotation marks, etc.):  "
       )
@@ -32,4 +33,5 @@ def get_reddit(subreddit,listing,limit,timeframe):
 
 r = get_reddit(subreddit,listing,limit,timeframe)
 
+#Test print to see why the return request.json() isn't making a file.  It is outputting something!
 print(get_reddit(subreddit,listing,limit,timeframe))

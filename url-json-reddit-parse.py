@@ -1,3 +1,4 @@
+import json
 import requests
 
 # subreddit = 'python'
@@ -35,3 +36,8 @@ r = get_reddit(subreddit,listing,limit,timeframe)
 
 #Test print to see why the return request.json() isn't making a file.  It is outputting something!
 print(get_reddit(subreddit,listing,limit,timeframe))
+
+with open ('data.json', 'w') as f:
+    json.dump(data, f)
+
+print("Data outputted to json.dump")
